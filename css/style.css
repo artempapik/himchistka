@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+    background-color: #f0f2f7;
+    color: #131313;
+    line-height: 1.5;
+    padding-top: 5rem;
+    user-select: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+}
+
+.topbar {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: #10131a;
+    color: #fff;
+    box-shadow: 0 10px 30px rgb(0 0 0 / .18);
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 18px;
+}
+
+.topbar-brand {
+    display: flex;
+    align-items: center;
+    min-width: 220px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.topbar-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13px;
+    color: rgb(255 255 255 / .85);
+}
+
+.topbar-link, .topbar-text {
+    color: rgb(255 255 255 / .87);
+    text-decoration: none;
+}
+
+.topbar-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.topbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(255 255 255 / .08);
+    border: 1px solid transparent;
+    transition: background-color .2s ease;
+
+    &:hover {
+        background-color: rgb(255 255 255 / .12);
+    }
+}
+
+.topbar-button--secondary {
+    background-color: #1f2630;
+}
+
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: #111b2d;
+    border-radius: 24px;
+    padding: 20px 0;
+}
+
+.sidebar-header {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 22px 24px;
+    border-bottom: 1px solid rgb(255 255 255 / .08);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-block: 1rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    width: 100%;
+    padding: 14px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255 255 255 / .78);
+    background: transparent;
+    border: none;
+    border-left: .25rem solid transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+    font-family: inherit;
+}
+
+.nav-item.active, .nav-item:active {
+    background-color: #fff;
+    color: #111b2d;
+    border-left-color: #1f2937;
+}
+
+.nav-item:hover {
+    background-color: rgb(255 255 255 / .04);
+    color: #fff;
+}
+
+.nav-item.active {
+    background-color: #fff;
+    color: #111b2d;
+    border-left-color: #1f2937;
+}
+
+.nav-icon {
+    width: 18px;
+    text-align: center;
+    color: inherit;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #111827;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #d1d5db;
+        border-radius: 14px;
+        font-size: 15px;
+        color: #111827;
+        background: #f9fafb;
+        transition: border-color .2s ease, box-shadow .2s ease;
+
+        &:focus {
+            outline: none;
+            border-color: #111827;
+            box-shadow: 0 0 0 3px rgb(17 24 39 / .08);
+        }
+
+        &::placeholder {
+            color: #9ca3af;
+        }
+    }
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        font-size: clamp(2rem, 3vw, 46px);
+        font-weight: bold;
+        color: #111827;
+    }
+
+    p {
+        max-width: 720px;
+        color: #4b5563;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    body {
+        padding-top: 104px;
+    }
+
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .topbar-inner {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .topbar-actions {
+        width: 100%;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+}

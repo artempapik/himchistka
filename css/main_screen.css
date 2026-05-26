@@ -1,0 +1,273 @@
+.hero {
+    text-align: center;
+    padding: 60px 28px 48px;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: clamp(36px, 4vw, 52px);
+        font-weight: bold;
+        color: #111827;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+}
+
+.hero-description {
+    max-width: 720px;
+    margin-inline: auto;
+    color: #4b5563;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.services-panel {
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgb(15 23 42 / .06);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.panel-header {
+    padding: 2rem 2rem 1.5rem;
+
+    h2 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: #111827;
+    }
+}
+
+.panel-body {
+    padding: 0 2rem 2rem;
+}
+
+.services-table-wrapper {
+    overflow-x: auto;
+    border-radius: 18px;
+    background: #f8fafc;
+    margin-bottom: 28px;
+}
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+    font-size: 15px;
+}
+
+.services-table th,
+.services-table td {
+    padding: 18px 22px;
+}
+
+.services-table th {
+    text-align: left;
+    background: transparent;
+    color: #111827;
+    font-weight: bold;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.services-table td {
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.services-table tbody tr:nth-child(even) {
+    background: #fff;
+}
+
+.services-table tbody tr:nth-child(odd) {
+    background: #f9fafb;
+}
+
+.services-table tr:last-child td {
+    border-bottom: none;
+}
+
+.panel-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #111827;
+    color: #fff;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .2s ease;
+
+    &:hover {
+        background-color: #1f2937;
+    }
+
+    &:active {
+        background-color: #0f172a;
+    }
+}
+
+.about-section {
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 24px 80px rgb(15 23 42 / .06);
+    margin-bottom: 40px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 24px 80px rgb(15 23 42 / .06);
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 18px;
+    font-size: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: #4b5563;
+        text-decoration: none;
+        transition: color .2s ease;
+
+        &:hover {
+            color: #111827;
+        }
+    }
+
+    span {
+        color: #4b5563;
+    }
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #111827;
+    min-width: 80px;
+}
+
+.footer {
+    background: #111b2d;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 60px;
+    font-size: 14px;
+
+    p {
+        margin: 0;
+        color: rgb(255 255 255 / .78);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 44px 20px 36px;
+    }
+
+    .panel-header, .panel-body {
+        padding-inline: 1.5rem;
+    }
+
+    .about-section, .contact-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .panel-header {
+        padding: 24px 20px 18px;
+    }
+
+    .panel-body {
+        padding: 0 20px 24px;
+    }
+
+    .about-section, .contact-card {
+        padding: 24px 20px;
+    }
+
+    .panel-header h2, .about-content h2, .contact-card h3 {
+        font-size: 22px;
+    }
+
+    .services-table {
+        th, td {
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .contact-label {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 32px 16px 24px;
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: .75rem;
+        }
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+}

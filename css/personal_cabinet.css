@@ -1,0 +1,88 @@
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 28px;
+    box-shadow: 0 24px 80px rgb(15 23 42 / .06);
+
+    h2 {
+        margin-bottom: 18px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #111827;
+    }
+}
+
+.profile-row, .stat-line {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-bottom: .75rem;
+    color: #4b5563;
+}
+
+.profile-row, .stat-line {
+    strong {
+        color: #111827;
+    }
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #111827;
+    color: #fff;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .2s ease;
+
+    &:hover {
+        background-color: #1f2937;
+    }
+}
+
+.orders-panel h2 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.orders-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 24px 80px rgb(15 23 42 / .06);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+@media (max-width: 980px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .profile-card, .orders-card {
+        padding: 1.5rem;
+    }
+}
