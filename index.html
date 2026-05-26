@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Адмін-панель | Geronok Dry Cleaning</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/our_services.css">
+        <link rel="stylesheet" href="css/create_order.css">
+        <link rel="stylesheet" href="css/pending_orders.css">
+        <link rel="stylesheet" href="css/order_history.css">
+        <link rel="stylesheet" href="css/materials.css">
+    </head>
+
+    <body>
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <div class="topbar-brand">
+                    <span class="brand-title">Geronok Dry Cleaning</span>
+                </div>
+                <div class="topbar-info">
+                    <a href="mailto:yuriy.geronok@gmail.com" class="topbar-link">yuriy.geronok@gmail.com</a>
+                    <span class="topbar-text">0991097731</span>
+                    <span class="topbar-text">м. Харків, вул. Світла, буд.23</span>
+                </div>
+                <div class="topbar-actions">
+                    <a href="#" class="topbar-button">Адміністратор</a>
+                    <a href="golovnui_ekran.html" class="topbar-button topbar-button--secondary">Вихід</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="dashboard">
+                <aside class="sidebar">
+                    <div class="sidebar-header">Адмін-панель</div>
+                    <nav class="sidebar-nav">
+                        <button class="nav-item" onpointerup="loadPage(event, 'our_services')">
+                            <span class="nav-icon">▸</span>
+                            <span>Наші послуги</span>
+                        </button>
+
+                        <button class="nav-item" onpointerup="loadPage(event, 'create_order')">
+                            <span class="nav-icon">▸</span>
+                            <span>Створити замовлення</span>
+                        </button>
+
+                        <button class="nav-item" onpointerup="loadPage(event, 'pending_orders')">
+                            <span class="nav-icon">▸</span>
+                            <span>Поточні замовлення</span>
+                        </button>
+
+                        <button class="nav-item" onpointerup="loadPage(event, 'order_history')">
+                            <span class="nav-icon">▸</span>
+                            <span>Історія замовлень</span>
+                        </button>
+
+                        <button class="nav-item" onpointerup="loadPage(event, 'materials')">
+                            <span class="nav-icon">▸</span>
+                            <span>Матеріали</span>
+                        </button>
+                    </nav>
+                </aside>
+                
+                <main class="main-content"></main>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/script.js"></script>
+</html>
